@@ -2,15 +2,6 @@ import random
 
 import pygame, sys
 
-def roundline(canvas, color, start, end, radius=1) :
-    Xaxis = end[0] - start[0]
-    Yaxis = end[1] - start[1]
-    dist = max(abs(Xaxis), abs(Yaxis))
-    for i in range(dist) :
-        x = int(start[0] + float(i) / dist * Xaxis)
-        y = int(start[1] + float(i) / dist * Yaxis)
-        pygame.draw.circle(canvas, color, (x, y), radius)
-
 def main():
     pygame.init()
     global screen, baseLayer
